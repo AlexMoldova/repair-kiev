@@ -1610,9 +1610,9 @@ footer{
   color:#08090c;
   animation:pulseCall 2.5s infinite;
 }
-.float-btn-viber{animation:floatBounce 3s ease-in-out infinite}
-.float-btn-whatsapp{animation:floatBounce 3s ease-in-out .4s infinite}
-.float-btn-telegram{animation:floatBounce 3s ease-in-out .8s infinite}
+
+
+
 .float-btn-viber{background:#7360f2}
 .float-btn-whatsapp{background:#25d366}
 .float-btn-telegram{background:#229ed9}
@@ -2606,6 +2606,18 @@ footer{
       blob.style.transform += ` translateY(${y * speed}px)`;
     });
   }, {passive:true});
+
+
+.float-btn-call{background:var(--accent);color:#08090c}
+.float-btn::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(255,255,255,.6);opacity:0;animation:ripple 2s infinite}
+.float-btn-viber::after{border-color:#7360f2}
+.float-btn-whatsapp::after{border-color:#25d366;animation-delay:.4s}
+.float-btn-telegram::after{border-color:#229ed9;animation-delay:.8s}
+@keyframes ripple{
+  0%{transform:scale(.8);opacity:1}
+  100%{transform:scale(1.8);opacity:0}
+}
+
 })();
 </script>
 
